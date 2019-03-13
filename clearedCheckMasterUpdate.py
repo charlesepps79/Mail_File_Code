@@ -34,7 +34,7 @@ for i in os.listdir(os.chdir(r'M:\2019 Programs\Master Spreadsheets')):
         wb.save(i)
 
 for i in os.listdir(os.chdir(r'M:\2019 Programs')):
-    if i.endswith("TEST.xlsx"):
+    if i.startswith("FB_Cleared"):
         wb = openpyxl.load_workbook(i)
         sheet = wb.get_sheet_by_name('Setupheader')
         for rowNum in range(2, sheet.max_row):  # skip the first row
